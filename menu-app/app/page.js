@@ -51,6 +51,13 @@ useEffect(() => {
             </div>
           </div>
         </div>
+        <div className='container text-start'>
+          <div className='row gx-5 mt-6'>
+            <div className='col-6'>
+            <MenuList data={data} category="Dinner"/>
+            </div>
+          </div>
+        </div>
       </main>
     );
   }
