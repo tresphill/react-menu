@@ -10,9 +10,12 @@ import Style from './styles.css'
 import Logo from './components/logo';
 import MenuList from './components/MenuList';
 // import BgImage from './components/bg-image';
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/js/bootstrap.min.js'
 
 export default function MenuDisplay(){
 const [data, setData] = useState([]);
+
 useEffect(() => {
   
   async function fetchData() {
@@ -34,11 +37,26 @@ useEffect(() => {
 
   return (
       <main className={Style.main}>
-          <Logo />
-          <MenuList data={data} category="Appetizer"/>
-          <MenuList data={data} category="Breakfast"/>
-          {/* <BgImage /> */}
+        <div className='container text-center'>
+          <div className='row mt-3'>
+            <div className='col-md-4'>
+            <Logo />
+            </div>
+          </div>
+        </div>
+        <div className='container text-end'>
+          <div className='row gx-5 mt-6'>
+            <div className='col-6'>
+            <MenuList data={data} category="Appetizer"/>
+            </div>
+          </div>
+        </div>
       </main>
     );
   }
-
+  
+  
+  {/* <MenuList data={data} category="Appetizer"/>
+  <MenuList data={data} category="Breakfast"/>
+  <MenuList data={data} category="Lunch"/> */}
+  {/* <BgImage /> */}
