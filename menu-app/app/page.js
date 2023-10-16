@@ -1,17 +1,12 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Style from './styles.css'
-// import Appetizers from './components/appetizers';
-// import Drinks from './components/drinks';
-// import Breakfast from './components/breakfast';
-// import Lunch from './components/lunch';
-// import Dinner from './components/dinner';
-import Logo from './components/logo';
-import MenuList from './components/MenuList';
-// import BgImage from './components/bg-image';
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap/dist/js/bootstrap.min.js'
+import './styles.css'
+import MenuList from './components/MenuList'
+import 'bootstrap/dist/css/bootstrap.js'
+import Nav from './components/nav.js'
+
+
 
 export default function MenuDisplay(){
 const [data, setData] = useState([]);
@@ -50,14 +45,16 @@ useEffect(() => {
             <MenuList data={data} category="Appetizer"/>
             </div>
             <div className='col-6'>
-            <MenuList data={data} category="Dinner"/>
+            <MenuList data={data} category="Breakfast"/>
             </div>
-          </div>
-        </div>
-        <div className='container text-start'>
-          <div className='row gx-5 mt-6'>
+            <div className='col-6'>
+            <MenuList data={data} category="Lunch"/>
+            </div>
             <div className='col-6'>
             <MenuList data={data} category="Dinner"/>
+            </div>
+            <div className='col-6'>
+            <MenuList data={data} category="Drinks"/>
             </div>
           </div>
         </div>

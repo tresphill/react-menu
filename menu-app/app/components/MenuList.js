@@ -1,10 +1,23 @@
 import React from 'react';
 import Dinner from './dinner'
 import Breakfast from './breakfast'
-import Appetizers from './appetizers'
+import Appetizer from './appetizers'
+import Drinks from './drinks'
+import Lunch from './lunch'
 
+const MenuList = ({ data, view }) => {
+    return (
+        <>
+        {view === 'Breakfast' && <Breakfast data={data} />}
+        {view === 'Lunch' && <Lunch data={data} />}
+        {view === 'Dinner' && <Dinner data={data} />}
+        {view === 'Appetizer' && <Appetizer data={data} />}
+        {view === 'Drinks' && <Drinks data={data} />}
+        </>
+    );
+};
 
-
+export default MenuList;
 
 
 
