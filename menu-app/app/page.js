@@ -36,25 +36,8 @@ useEffect(() => {
           <div className='row mt-3'>
             <div className='col-md-4'>
             <Logo />
-            </div>
-          </div>
-        </div>
-        <div className='container'>
-          <div className='row gx-5 mt-6'>
-            <div className='col-6 text-end'>
-            <MenuList data={data} category="Appetizer"/>
-            </div>
-            <div className='col-6'>
-            <MenuList data={data} category="Breakfast"/>
-            </div>
-            <div className='col-6'>
-            <MenuList data={data} category="Lunch"/>
-            </div>
-            <div className='col-6'>
-            <MenuList data={data} category="Dinner"/>
-            </div>
-            <div className='col-6'>
-            <MenuList data={data} category="Drinks"/>
+            <Nav setView={setView} />
+            <MenuList data={data} view={view} />
             </div>
           </div>
         </div>
