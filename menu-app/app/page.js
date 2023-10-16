@@ -10,6 +10,7 @@ import Nav from './components/nav.js'
 
 export default function MenuDisplay(){
 const [data, setData] = useState([]);
+const [view, setView] = useState('HomeView')
 
 useEffect(() => {
   

@@ -1,4 +1,4 @@
-export default function Breakfast (){
+export default function Breakfast ({data}){
     return(
         <div>
         {data && data.filter((fast) => fast.category.includes('Breakfast')).map(item => (
