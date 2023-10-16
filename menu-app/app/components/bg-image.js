@@ -1,11 +1,11 @@
 import Image from "next/image"
-import styles from "../page.module.css"
+import styles from "./page.module.css"
 
-export default function BgImage(){
+export default function bgImage(){
     return(
         <div>
         <Image 
-        className="bg-image"
+        className="bgImage"
         src={"/images/Fig-collage-asset.jpg"} 
         width={500}
         height={500}

@@ -1,5 +1,14 @@
-export default function Breakfast(){
-    return (
-        <h3>Breakfast</h3>
+export default function Breakfast ({data}){
+    return(
+        <div>
+        {data && data.filter((fast) => fast.category.includes('Breakfast')).map(item => (
+            <div key={item.id}>
+                <h4 key={item.title} className="card-title item-title fontcolor">{item.title}</h4>
+                <p key={item.description} className="card-text item-description fontcolor">{item.description}</p>
+                <p className="card-text fontcolor">${item.price}</p>
+            </div>
+        ))}
+        {!data && <div>There is no data</div>}
+        </div>
     )
 }

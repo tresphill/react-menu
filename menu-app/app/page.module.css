@@ -1,13 +1,1 @@
-.main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6rem;
-  min-height: 100vh;
-}
 
-.bg-image{
-  object-fit: cover;
-  transform: rotate(0.5turn);
-}
