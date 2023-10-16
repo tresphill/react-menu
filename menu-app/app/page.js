@@ -44,10 +44,13 @@ useEffect(() => {
             </div>
           </div>
         </div>
-        <div className='container text-end'>
+        <div className='container'>
           <div className='row gx-5 mt-6'>
-            <div className='col-6'>
+            <div className='col-6 text-end'>
             <MenuList data={data} category="Appetizer"/>
+            </div>
+            <div className='col-6'>
+            <MenuList data={data} category="Dinner"/>
             </div>
           </div>
         </div>
@@ -62,8 +65,3 @@ useEffect(() => {
     );
   }
   
-  
-  {/* <MenuList data={data} category="Appetizer"/>
-  <MenuList data={data} category="Breakfast"/>
-  <MenuList data={data} category="Lunch"/> */}
-  {/* <BgImage /> */}
