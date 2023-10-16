@@ -1,22 +1,20 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './styles.css'
+import Style from './styles.css'
 import MenuList from './components/MenuList'
-import 'bootstrap/dist/css/bootstrap.js'
 import Nav from './components/nav.js'
-
+import Logo from './components/logo'
 
 
 export default function MenuDisplay(){
-const [data, setData] = useState([]);
-const [view, setView] = useState('HomeView')
+  const [data, setData] = useState([]);
+  const [view, setView] = useState('HomeView')
 
-useEffect(() => {
-  
-  async function fetchData() {
+  useEffect(() => {
+    const fetchData = async() => {
     try {
-      const response = await axios.get('https://www.jsonkeeper.com/b/MDXW');
+      const response = await axios('https://www.jsonkeeper.com/b/MDXW');
       setData(response.data);
       console.log(data);
 
@@ -24,9 +22,6 @@ useEffect(() => {
       console.error('Error fetching data:', error);
     }
   }
-  if (!data) {
-      return null;
-    }
     
     fetchData(); 
   }, []); 

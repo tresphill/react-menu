@@ -1,7 +1,7 @@
 import React from 'react';
 import Dinner from './dinner'
 import Breakfast from './breakfast'
-import Appetizer from './appetizers'
+import Appetizer from './appetizer'
 import Drinks from './drinks'
 import Lunch from './lunch'
 
